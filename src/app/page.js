@@ -1,3 +1,5 @@
+import PhotoGallery from './PhotoGallery';
+
 export default function Home() {
   return (
     <>
@@ -92,6 +94,7 @@ export default function Home() {
               </li>
             </ul>
           </section>
+          <PhotoGallery />
         </div>
       </main>
     </>
