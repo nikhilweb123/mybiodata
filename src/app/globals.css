@@ -417,45 +417,6 @@ h2 i {
   right: -15px;
 }
 
-.fullscreen-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(10px);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.fullscreen-image-wrapper {
-  width: 90vw;
-  height: 90vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.close-fullscreen-btn {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  background: transparent;
-  color: white;
-  font-size: 2rem;
-  border: none;
-  cursor: pointer;
-  z-index: 10000;
-  transition: color 0.3s ease;
-}
-
-.close-fullscreen-btn:hover {
-  color: #ef4444;
-}
 
 @media (max-width: 768px) {
   .left-btn {

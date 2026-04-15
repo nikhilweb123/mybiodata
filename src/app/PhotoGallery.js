@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from 'react';
 import Image from 'next/image';
 import img1 from './biodata-photo-1.jpg';
 import img2 from './biodata-photo-2.jpg';
@@ -7,14 +8,18 @@ import img2 from './biodata-photo-2.jpg';
 const images = [img1, img2];
 
 export default function PhotoGallery() {
+  const scrollContainerRef = useRef(null);
+
   const scrollLeft = () => {
-    const container = document.getElementById('gallery-container');
-    if (container) container.scrollBy({ left: -300, behavior: 'smooth' });
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
   };
 
   const scrollRight = () => {
-    const container = document.getElementById('gallery-container');
-    if (container) container.scrollBy({ left: 300, behavior: 'smooth' });
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -33,7 +38,7 @@ export default function PhotoGallery() {
         </button>
 
         <div
-          id="gallery-container"
+          ref={scrollContainerRef}
           className="gallery-scroll-container"
           style={{
             display: 'flex',
@@ -65,6 +70,7 @@ export default function PhotoGallery() {
                 fill
                 placeholder="blur"
                 style={{ objectFit: 'cover' }}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           ))}

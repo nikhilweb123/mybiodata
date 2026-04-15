@@ -8,8 +8,18 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-  title: 'Biodata - Nikhil Kumar',
+  title: 'Nikhil Kumar - Biodata',
   description: 'Personal Biodata of Nikhil Kumar, Software Engineer.',
+  openGraph: {
+    title: 'Nikhil Kumar - Biodata',
+    description: 'Personal Biodata of Nikhil Kumar, Software Engineer.',
+    type: 'profile',
+    locale: 'en_IN',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {
