@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --bg-color: #201f1f;
+  --bg-color: #0a0707;
   --text-main: #f0f4f8;
-  --text-muted: #94a3b8;
+  --text-muted: #588dd8;
   --primary: #ececff;
   --secondary: #ffffff;
   --glass-bg: rgba(255, 255, 255, 0.03);
